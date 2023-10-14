@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Comic Sans Invasion",
+  "version": "1.6.0",
+  "description": "You can never have too much comic sans. This extension makes everything frustrating to graphic designers.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Comic Sans Invasion",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
