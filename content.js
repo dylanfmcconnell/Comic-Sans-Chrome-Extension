@@ -7,6 +7,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             document.body.style.fontFamily = "Comic Sans MS";
         } else {
             document.body.style.fontFamily = "initial";
+            parent.window.location.reload(true);
         }
     }
 });
